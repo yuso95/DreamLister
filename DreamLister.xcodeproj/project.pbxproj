@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D51C71651DEE14180089EAB5 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51C71641DEE14180089EAB5 /* ItemCell.swift */; };
+		D5A1D0481DEF62E500EC3077 /* ItemDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A1D0471DEF62E500EC3077 /* ItemDetailVC.swift */; };
 		D5E46E621DECD548006610EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E46E611DECD548006610EA /* AppDelegate.swift */; };
 		D5E46E641DECD548006610EA /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E46E631DECD548006610EA /* MainVC.swift */; };
 		D5E46E671DECD548006610EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5E46E651DECD548006610EA /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		D51C71641DEE14180089EAB5 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		D5A1D0471DEF62E500EC3077 /* ItemDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailVC.swift; sourceTree = "<group>"; };
 		D5E46E5E1DECD548006610EA /* DreamLister.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DreamLister.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5E46E611DECD548006610EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5E46E631DECD548006610EA /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				D5E46E631DECD548006610EA /* MainVC.swift */,
+				D5A1D0471DEF62E500EC3077 /* ItemDetailVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 				D5E46E621DECD548006610EA /* AppDelegate.swift in Sources */,
 				D5E46E6A1DECD548006610EA /* DreamLister.xcdatamodeld in Sources */,
 				D5E46E831DECD93F006610EA /* Item+CoreDataProperties.swift in Sources */,
+				D5A1D0481DEF62E500EC3077 /* ItemDetailVC.swift in Sources */,
 				D5E46E841DECD93F006610EA /* Store+CoreDataClass.swift in Sources */,
 				D5E46E821DECD93F006610EA /* Item+CoreDataClass.swift in Sources */,
 				D5E46E811DECD93F006610EA /* Image+CoreDataProperties.swift in Sources */,
