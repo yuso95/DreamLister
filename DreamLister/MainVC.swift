@@ -72,6 +72,30 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         return 150
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if let objs = controller.fetchedObjects, objs.count > 0 {
+            
+            let item = objs[indexPath.row]
+            
+            performSegue(withIdentifier: "ItemDetailVC", sender: item)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "ItemDetailVC" {
+            
+            if let destination = segue.destination as? ItemDetailVC {
+                
+                if let item = sender as? Item {
+                    
+                    destination.itemToEdit = item
+                }
+            }
+        }
+    }
+    
     // Core Data functions
     
     func attemptFetch() {

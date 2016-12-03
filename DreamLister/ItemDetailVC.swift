@@ -22,7 +22,15 @@ class ItemDetailVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSour
     
     @IBAction func saveBTNPressed(_ sender: UIButton) {
         
-        let item = Item(context: context)
+        var item: Item!
+        
+        if itemToEdit == nil {
+            
+            item = Item(context: context)
+        } else {
+            
+            item = itemToEdit
+        }
         
         if let title = titleField.text {
             
@@ -48,6 +56,8 @@ class ItemDetailVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSour
     }
     
     var stores = [Store]()
+    
+    var itemToEdit: Item?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,6 +73,11 @@ class ItemDetailVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSour
 //        generateTestData()
         
         getStores()
+        
+        if itemToEdit != nil {
+            
+            loadItemData()
+        }
     }
 
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
@@ -87,6 +102,33 @@ class ItemDetailVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSour
         // Update it later
         
         
+    }
+    
+    func loadItemData() {
+        
+        if let item = itemToEdit {
+            
+            titleField.text = item.title
+            priceField.text = "\(item.price)"
+            detailField.text = item.details
+            
+            if let store = item.toStore {
+                
+                var index = 0
+                
+                repeat {
+                    
+                    let s = stores[index]
+                    
+                    if s.name == store.name {
+                        
+                        storePicker.selectRow(index, inComponent: 0, animated: true)
+                        
+                        index += 1
+                    }
+                } while index < stores.count
+            }
+        }
     }
     
     // Core data functions
