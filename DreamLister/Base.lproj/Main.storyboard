@@ -213,6 +213,9 @@
                                 <state key="normal" title="Save Item">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="saveBTNPressed:" destination="ivb-Ah-hn6" eventType="touchUpInside" id="YoN-qN-K1R"/>
+                                </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vsL-hu-4SQ"/>
                         </subviews>
@@ -265,7 +268,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jh9-Je-lzk" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="JFp-Of-dVL">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JFp-Of-dVL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
